@@ -14,6 +14,6 @@
 
 int	main()
 {
-	rush00(5,7);
+	rush02(5,7);
 	return (0);
 }
