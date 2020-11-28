@@ -12,7 +12,7 @@
 
 #include "rush00.c"
 
-int	main()
+int	main(void)
 {
 	rush00(5,7);
 	return (0);
