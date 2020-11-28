@@ -12,39 +12,28 @@
 
 #include "ft_putchar.c"
 
-void	rush00(int x, int y)
+void	rush03(int x, int y)
 {
-	char	a[x][y];
 	int		i;
 	int		j;
 
-	i = -1;
-	j = -1;
-	while (++j < y)
+	i = 0;
+	j = 0;
+	while (++j <= y)
 	{
-		i = -1;
-		while (++i < x)
+		i = 0;
+		while (++i <= x)
 		{
-			if ((i == 0 && j == 0) || (j == 0 && i == x - 1) || (j == y - 1 && i == 0) || (j == y - 1 && i == x - 1))
-			{
-				a[i][j] = 'o';
-				ft_putchar(a[i][j]);
-			}
-			else if ((i > 0 && i < x) && (j == 0 || j == y - 1)) 
-			{
-				a[i][j] = '-';
-				ft_putchar(a[i][j]);
-			}
-			else if ((j > 0 && j < y) && (i == 0 || i == x - 1)) 
-			{
-				a[i][j] = '|';
-				ft_putchar(a[i][j]);
-			}
+			if ((i == 1 && j == 1) || (j == y && i == 1))
+				ft_putchar('A');
+			else if ((i > 1 && i < x) && (j == 1 || j == y)) 
+				ft_putchar('B');
+			else if ((j > 1 && j < y) && (i == 1 || i == x))
+				ft_putchar('B');
+			else if ((j == 1 && i == x) || (j == y && i == x))
+				ft_putchar('C');
 			else
-			{
-				a[i][j] = ' ';
-				ft_putchar(a[i][j]);
-			}
+				ft_putchar(' ');
 		}
 		ft_putchar('\n');		
 	}
