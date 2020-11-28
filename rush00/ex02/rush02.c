@@ -33,7 +33,7 @@ void	rush02(int x, int y)
 			else if ((j == y && i == 1) || (j == y && i == x))
 				ft_putchar('C');
 			else
-				ft_putchar('');
+				ft_putchar(' ');
 		}
 		ft_putchar('\n');		
 	}
