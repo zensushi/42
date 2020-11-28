@@ -12,18 +12,17 @@
 
 #include "ft_putchar.c"
 
-void	rush00(int x, int y)
+void	rush02(int x, int y)
 {
-	char	a[x][y];
 	int		i;
 	int		j;
 
-	i = -1;
-	j = -1;
-	while (++j < y)
+	i = 0;
+	j = 0;
+	while (++j <= y)
 	{
-		i = -1;
-		while (++i < x)
+		i = 0;
+		while (++i <= x)
 		{
 			if ((i == 0 && j == 0) || (j == 0 && i == x - 1) || (j == y - 1 && i == 0) || (j == y - 1 && i == x - 1))
 			{
